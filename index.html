@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="logo"></a>
+                <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tv Shows</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Laters</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text " placeholder="Search">
+                </div>
+        </header>
+        <section class="banner">
+            <img src="./img/tms.jpg" alt="personaje" class="bg">
+            <span class="sombraImg"></span>
+            <div class="content">
+                <img src="./img/logoletras.png" class="moviTitle">
+                <h4>
+                    <span>2022</span>
+                    <span><i>6+</i></span>
+                    <span>6 Temporada</span>
+                    <span>Serie</span>
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Odit dignissimos
+                     excepturi incidunt omnis id impedit 
+                     quam suscipit, adipisci fugiat neque 
+                     quos, similique delectus repellat
+                      officiis commodi. Nostrum perferendis
+                       facere illum!
+                </p>
+                <div class="buttons">
+                    <a href="#">Play</a>
+                    <a href="#">My List</a>
+                </div>
+
+            </div>
+           <a href="#" class="play" onclick="toggleVideo();">
+            <img src="./img/play.png" alt="play">watch trailer</a>
+
+        </section>
+        <section class="trailer">
+            <video src="./img/trailer.mp4" controls="true"></video>
+            <img src="./img/close.png" class="close"  onclick="toggleVideo ();" alt="">
+
+        </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+
+        }
+    </script>
+</body>
+</html>
